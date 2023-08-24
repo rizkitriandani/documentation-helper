@@ -1,0 +1,69 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ReadTheDocsLoader",
+        "importPath": "langchain.document_loaders",
+        "description": "langchain.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain.document_loaders",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAIEmbeddings",
+        "importPath": "langchain.embeddings",
+        "description": "langchain.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "GooglePalmEmbeddings",
+        "importPath": "langchain.embeddings",
+        "description": "langchain.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "Pinecone",
+        "importPath": "langchain.vectorstores",
+        "description": "langchain.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "pinecone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pinecone",
+        "description": "pinecone",
+        "detail": "pinecone",
+        "documentation": {}
+    },
+    {
+        "label": "ingest_docs",
+        "kind": 2,
+        "importPath": "ingestion",
+        "description": "ingestion",
+        "peekOfCode": "def ingest_docs() -> None:\n    loader = ReadTheDocsLoader(path=\"langchain-docs/api.python.langchain.com/en/latest\")\n    raw_documents = loader.load()\n    print(f\"loaded {len(raw_documents) }documents\")\n    text_splitter = RecursiveCharacterTextSplitter(\n        chunk_size=1000, chunk_overlap=100, separators=[\"\\n\\n\", \"\\n\", \" \", \"\"]\n    )\n    documents = text_splitter.split_documents(documents=raw_documents)\n    print(f\"Splitted into {len(documents)} chunks\")\n    for doc in documents:",
+        "detail": "ingestion",
+        "documentation": {}
+    }
+]
